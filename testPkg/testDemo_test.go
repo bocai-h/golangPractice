@@ -37,3 +37,8 @@ func TestIntroduce(t *testing.T) {
 	}
 	t.Logf("The expected introduce is %q.\n", expected)
 }
+
+func TestFail(t *testing.T) {
+	t.FailNow()
+	t.Logf("#########")
+}
