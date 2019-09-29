@@ -10,7 +10,7 @@ import (
 func main() {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("x-request-id", "x-request-id")
-
+		w.Header().Set("Transfer-Encoding", "chunked")
 		f, _ := w.(http.Flusher)
 
 		for i := 0; i < 10; i++ {
