@@ -5,7 +5,6 @@ import (
 	"os"
 	"os/exec"
 	"runtime"
-	"syscall"
 )
 
 //underlyingError 会返回操作系统潜在错误
@@ -25,7 +24,6 @@ func underlyingError(err error) error {
 
 func main() {
 	// 示例一
-	syscall.Errno
 	r, w, err := os.Pipe()
 	if err != nil {
 		fmt.Printf("unexpected error: %s\n", err)
