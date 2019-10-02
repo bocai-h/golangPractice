@@ -29,6 +29,7 @@ func main() {
 		fmt.Printf("unexpected error: %s\n", err)
 		return
 	}
+	fmt.Printf("Hello world")
 	// 人为制造 *os.PathError类型的错误
 	r.Close()
 	_, err = w.Write([]byte("hi"))
@@ -134,4 +135,5 @@ func main() {
 	if f != nil {
 		f.Close()
 	}
+
 }
