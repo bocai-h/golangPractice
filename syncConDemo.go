@@ -24,7 +24,7 @@ func main() {
 		defer func() {
 			sign <- struct{}{}
 		}()
-		for i := 1; i < max; i++ {
+		for i := 1; i <= max; i++ {
 			time.Sleep(time.Millisecond * 500)
 			lock.Lock()
 			for mailbox == 1 {
