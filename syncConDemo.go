@@ -27,7 +27,7 @@ func main() {
 		for i := 1; i < max; i++ {
 			time.Sleep(time.Millisecond * 500)
 			lock.Lock()
-			if mailbox == 1 {
+			for mailbox == 1 {
 				sendCond.Wait()
 			}
 			log.Printf("send [%d]: the mailbox is empty.", i)
