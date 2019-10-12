@@ -18,6 +18,7 @@ func main() {
 			f.Flush()
 			time.Sleep(time.Second)
 		}
+		fmt.
 
 	})
 
